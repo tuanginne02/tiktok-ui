@@ -1,49 +1,47 @@
 .wrapper {
+  --search-boder-radius: 92px;
   height: var(--default-layout-header-height);
-  box-shadow: 0px 1px 1px rgb(0 0 0 /12%);
+  width: 100%;
+  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   margin: 20px 0;
 }
 .content {
-  display: flex;
   height: 100%;
   width: var(--default-layout-header-width);
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 20px 0;
+  justify-items: center;
 }
 .search,
 .search-result {
-  width: 361px;
+  width: 356px;
 }
 .search {
   position: relative;
-  display: flex;
-  align-items: center;
-  width: 361px;
-  padding-left: 16px;
-  font-size: 1.6rem;
-  color: rgba(22, 24, 35, 0.06);
+  border: 1.5px solid transparent;
   height: var(--search-height);
+  border-radius: var(--search-boder-radius);
   background-color: rgba(22, 24, 35, 0.06);
-  border: 1px solid transparent;
-  border-radius: var(--default-border-radius);
+  padding-left: 16px;
+  justify-items: center;
+  display: flex;
   input {
-    flex: 1;
-    background-color: transparent;
-    color: rgba(22, 24, 35, 0.3);
     caret-color: var(--primary);
-    border: none;
-    outline: none;
+    color: var(--black);
+    padding: 12px 0;
     font-size: 1.6rem;
-  }
-  &:focus-within {
-    border-color: rgba(22, 24, 35, 0.3);
+    outline: none;
+    background-color: transparent;
+    flex: 1;
   }
   input:not(:placeholder-shown) ~ .search-button {
     color: rgba(22, 24, 35, 0.75);
+  }
+
+  &:focus-within {
+    border-color: rgba(22, 24, 35, 0.2);
   }
 }
 .search-clear,
@@ -60,6 +58,7 @@
   height: 100%;
   border-top-right-radius: var(--default-border-radius);
   border-bottom-right-radius: var(--default-border-radius);
+
   font-size: 1.8rem;
   color: rgba(22, 24, 35, 0.3);
   &:hover {
@@ -70,10 +69,24 @@
     background-color: rgba(22, 24, 35, 0.06);
   }
 }
+
 .search-title {
   font-size: 2rem;
   font-weight: 700;
   color: rgba(22, 24, 35, 0.7);
   margin: 10px 15px;
   padding: 0;
+}
+.action {
+  display: flex;
+  align-items: center;
+}
+.customs-plugin {
+  color: rgba(22, 24, 35, 0.6);
+}
+.upload {
+  border: 1px solid var(--border-color);
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
 }
