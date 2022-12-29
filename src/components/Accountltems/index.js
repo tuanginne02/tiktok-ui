@@ -1,1 +1,1 @@
-export {default} from './AccountsItem'
+export { default } from './AccountItem';

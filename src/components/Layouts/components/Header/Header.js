@@ -1,6 +1,7 @@
 import classNames from 'classnames/bind';
 import style from './Header.module.scss';
 import AccountsItem from '~/components/Accountltems/AccountItem';
+import MenuSetting from '~/components/Popper/MenuSetting';
 import Button from '~/components/Button';
 
 import Tippy from '@tippyjs/react/headless';
@@ -13,18 +14,45 @@ import {
   faSpinner,
   faPlus,
   faEllipsisVertical,
+  faLanguage,
+  faCircleQuestion,
+  faKeyboard,
+  faMoon,
+  faToggleOn,
+  faToggleOff,
 } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(style);
+const MENU_ITEMS = [
+  {
+    icon: <FontAwesomeIcon icon={faLanguage} />,
+    title: 'English',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+    title: 'Feedback and help',
+    to: '/feedback',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faKeyboard} />,
+    title: 'Keyboard shortcuts',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faMoon} />,
+    icon1: <FontAwesomeIcon icon={faToggleOn} />,
+    icon2: <FontAwesomeIcon icon={faToggleOff} />,
+    title: 'Dark mode',
+  },
+];
 
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
 
   useEffect(() => {
     setTimeout(() => {
-      setSearchResult([]);
+      setSearchResult([1, 2, 3]);
     }, 0);
-  },[]);
+  }, []);
 
   return (
     <header className={cx('wrapper')}>
@@ -39,10 +67,10 @@ function Header() {
             <div className={cx('search-result')} tabIndex="-1" {...attrs}>
               <PopperWrapper>
                 <h4 className={cx('search-title')}>Accout</h4>
-                <AccountsItem/>
-                <AccountsItem/>
-                <AccountsItem/>
-                <AccountsItem/>
+                <AccountsItem />
+                <AccountsItem />
+                <AccountsItem />
+                <AccountsItem />
               </PopperWrapper>
             </div>
           )}
@@ -60,6 +88,7 @@ function Header() {
             </button>
           </div>
         </Tippy>
+ 
         <div className={cx('action')}>
           <Button upload large to="/upload" leftIcon={<FontAwesomeIcon icon={faPlus} />}>
             Upload
@@ -67,10 +96,14 @@ function Header() {
           <Button large primary to="/login">
             Log in
           </Button>
-          <Button small>
-            <FontAwesomeIcon icon={faEllipsisVertical} />
-          </Button>
-          <Button small rounded className={cx('customs-plugin')}>
+          <MenuSetting items={MENU_ITEMS}>
+            <div>
+              <Button small>
+                <FontAwesomeIcon icon={faEllipsisVertical} />
+              </Button>
+            </div>
+          </MenuSetting>
+          <Button rounded className={cx('customs-plugin')}>
             Get app
           </Button>
         </div>
