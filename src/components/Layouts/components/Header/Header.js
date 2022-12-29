@@ -27,6 +27,36 @@ const MENU_ITEMS = [
   {
     icon: <FontAwesomeIcon icon={faLanguage} />,
     title: 'English',
+    chidren: {
+      title: 'Language',
+      data: [
+        {
+          type: 'language',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'language',
+          code: 'vi',
+          title: 'Tiếng Việt',
+        },
+        {
+          type: 'language',
+          code: 'kora',
+          title: 'Tiếng Hàn',
+        },
+        {
+          type: 'language',
+          code: 'jap',
+          title: 'Tiếng Nhật',
+        },
+        {
+          type: 'language',
+          code: 'chin',
+          title: 'Tiếng Trung',
+        },
+      ],
+    },
   },
   {
     icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -53,6 +83,15 @@ function Header() {
       setSearchResult([1, 2, 3]);
     }, 0);
   }, []);
+
+  //handleLogic
+  const handleMenuChange = (menuItems) => {
+    switch (menuItems.type) {
+      case 'language':
+      break;
+      default:
+    }
+  };
 
   return (
     <header className={cx('wrapper')}>
@@ -88,7 +127,7 @@ function Header() {
             </button>
           </div>
         </Tippy>
- 
+
         <div className={cx('action')}>
           <Button upload large to="/upload" leftIcon={<FontAwesomeIcon icon={faPlus} />}>
             Upload
@@ -96,7 +135,7 @@ function Header() {
           <Button large primary to="/login">
             Log in
           </Button>
-          <MenuSetting items={MENU_ITEMS}>
+          <MenuSetting items={MENU_ITEMS} onChange={handleMenuChange}>
             <div>
               <Button small>
                 <FontAwesomeIcon icon={faEllipsisVertical} />

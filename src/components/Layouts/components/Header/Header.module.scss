@@ -13,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
+  padding: 0 var(--default-layout-horizontal-spacer);
 }
 .search,
 .search-result {
@@ -89,4 +90,10 @@
   &:hover {
     background-color: rgba(22, 24, 35, 0.03);
   }
+}
+.line {
+  height: calc(var(--search-height) / 2);
+  width: 1px;
+  margin: var(--search-margin) 0;
+  background-color: rgba(22, 24, 35, 0.3);
 }

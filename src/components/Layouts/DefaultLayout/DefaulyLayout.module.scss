@@ -8,6 +8,8 @@
     width: var(--default-layout-header-width);
     min-height: 100px;
     display: flex;
+  padding: 0 var(--default-layout-horizontal-spacer);
+
   }
   
   .content {
