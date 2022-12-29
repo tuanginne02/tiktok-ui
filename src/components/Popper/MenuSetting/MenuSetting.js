@@ -9,8 +9,7 @@ import { useState } from 'react';
 const cx = classNames.bind(style);
 const defaultFn = () => {};
 
-
-function MenuSetting({ children, items = [], onChange= defaultFn}) {
+function MenuSetting({ children, items = [], onChange = defaultFn }) {
   const [history, setHistory] = useState([{ data: items }]);
   const current = history[history.length - 1];
 
@@ -26,10 +25,8 @@ function MenuSetting({ children, items = [], onChange= defaultFn}) {
               console.log(item.chidren);
               setHistory((prev) => [...prev, item.chidren]);
               return;
-            }
-            else {
+            } else {
               onChange(item);
-
             }
           }}
         />
@@ -45,7 +42,7 @@ function MenuSetting({ children, items = [], onChange= defaultFn}) {
       visible
       interactive
       render={(attrs) => (
-        <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
+        <div className={cx('wrapper')} tabIndex="-1" {...attrs}>
           <PopperWrapper className={cx('menu-popper')}>
             {history.length > 1 && (
               <HeaderLanguage
@@ -59,6 +56,9 @@ function MenuSetting({ children, items = [], onChange= defaultFn}) {
           </PopperWrapper>
         </div>
       )}
+      onHide={() => {
+        setHistory((prev) => prev.slice(0, 1));
+      }}
     >
       {children}
     </Tippy>

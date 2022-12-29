@@ -1,7 +1,16 @@
 //Menu Setting
 
-.menu-list {
+.wrapper {
   width: 261px;
+
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+  border-radius: 8px;
+  max-height: min(100vh - 96px - 60px, 734px);
+  min-height: 100px;
+  margin-top: -25px;
+  margin-right: 25px;
+  overflow: hidden;
 
   .menu-item {
     justify-content: flex-start;
@@ -10,6 +19,7 @@
     width: 100%;
   }
 }
+
 .menu-popper {
   padding-bottom: 8px;
 }
@@ -17,6 +27,9 @@
 //MenuItem
 .menu-item {
   line-height: 1.8rem;
+  &.separate {
+    border-top: 1px soild rgba(22, 24, 35, 0.12);
+  }
   &:hover {
     background-color: rgba(22, 24, 35, 0.03);
   }

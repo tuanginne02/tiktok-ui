@@ -4,7 +4,7 @@
   --primary: rgba(254, 44, 85, 1);
   --black: #000;
   --white: rgba(255, 255, 255, 1);
-  --text-color: #333;
+  --text-color: rgba(22, 24, 35);
   --border-color: rgba(22, 24, 35, 0.12);
   --tikets-check: rgb(32, 213, 236);
   //Default Layout
@@ -56,4 +56,32 @@ input,
 a[href] {
   color: var(--text-color);
   text-decoration: none;
+}
+//Custom typpy tootip
+body {
+  .tippy-box {
+    background-color: rgba(84, 84, 84, 0.92);
+    border-radius: 8px;
+    font-weight: 600;
+    height: 38px;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  .tippy-arrow {
+    color: rgba(84, 84, 84, 0.92);
+  }
+  .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+    top: -8px;
+  }
+  .tippy-content {
+    padding: 8px 9px;
+  }
+}
+.icon-no {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-image: transparent;
+  border: transparent;
 }
