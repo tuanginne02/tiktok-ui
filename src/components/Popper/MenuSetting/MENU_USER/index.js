@@ -1,0 +1,1 @@
+export {MENU_USER} from './MENU_USER.JS'

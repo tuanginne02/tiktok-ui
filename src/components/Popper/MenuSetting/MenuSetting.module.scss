@@ -2,29 +2,33 @@
 
 .wrapper {
   width: 261px;
-  background: rgb(255, 255, 255);
-  box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
-  border-radius: 8px;
-  max-height: min(100vh - 96px - 60px, 734px);
-  min-height: 100px;
+  // background: rgb(255, 255, 255);
+  // box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+  // border-radius: 8px;
+  // max-height: min(100vh - 96px - 60px, 734px);
+  // min-height: 100px;
   margin-top: -15px;
   margin-right: 25px;
   .wrapper-item {
     justify-content: flex-start;
-    border-radius: 0;
     margin-left: 0;
-    width: 100%;
   }
 }
 
 .menu-popper {
   padding-bottom: 8px;
 }
+.menu-scroll {
+  overflow-x: hidden;
+}
 
 //MenuItem
 .wrapper-item {
-  margin-left: 0;
+  width: 100%; 
+  border-radius: 0;
+  padding: 11px 16px;
   line-height: 1.8rem;
+  font-weight: 600;
   &.separate {
     border-top: 1px soild rgba(22, 24, 35, 0.12);
   }
@@ -37,10 +41,9 @@
 .header {
   position: relative;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
   margin-top: 0;
   height: 50px;
+  flex-shrink: 0;
 }
 .back-btn {
   height: 50px;
@@ -48,7 +51,6 @@
   background-color: transparent;
   font-size: 1.6rem;
   padding: 0 30px;
-  // width: 100%;
 }
 
 .header-title {

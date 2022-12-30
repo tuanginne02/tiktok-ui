@@ -5,6 +5,7 @@
   }
   
   .container {
+    margin-top: var(--default-layout-header-height);
     width: var(--default-layout-header-width);
     min-height: 100px;
     display: flex;

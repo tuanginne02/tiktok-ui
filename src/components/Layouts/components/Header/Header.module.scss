@@ -1,19 +1,29 @@
 .wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
   height: var(--default-layout-header-height);
   box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
-  display: flex;
-  justify-content: space-between;
+  background-color: var(--white);
   align-items: center;
-  margin: 20px 0;
+  // margin: 20px 0;
+  z-index: 10;
 }
 .content {
   height: 100%;
   width: var(--default-layout-header-width);
+  background-color: var(--white);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
   padding: 0 var(--default-layout-horizontal-spacer);
+}
+.logoLink {
+  display: flex;
 }
 
 .action {

@@ -6,8 +6,10 @@ import Button from '~/components/Button';
 import Search from '../Search';
 import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icon/Icon';
 import Image from '~/components/Image';
+import routesConfig from '~/config/routes';
 
 import Tippy from '@tippyjs/react/';
+import { Link } from 'react-router-dom';
 import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -35,6 +37,82 @@ const MENU_ITEMS = [
     chidren: {
       title: 'Language',
       data: [
+        {
+          type: 'language',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'language',
+          code: 'vi',
+          title: 'Tiếng Việt',
+        },
+        {
+          type: 'language',
+          code: 'kora',
+          title: 'Tiếng Hàn',
+        },
+        {
+          type: 'language',
+          code: 'jap',
+          title: 'Tiếng Nhật',
+        },
+        {
+          type: 'language',
+          code: 'chin',
+          title: 'Tiếng Trung',
+        },
+        {
+          type: 'language',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'language',
+          code: 'vi',
+          title: 'Tiếng Việt',
+        },
+        {
+          type: 'language',
+          code: 'kora',
+          title: 'Tiếng Hàn',
+        },
+        {
+          type: 'language',
+          code: 'jap',
+          title: 'Tiếng Nhật',
+        },
+        {
+          type: 'language',
+          code: 'chin',
+          title: 'Tiếng Trung',
+        },
+
+        {
+          type: 'language',
+          code: 'en',
+          title: 'English',
+        },
+        {
+          type: 'language',
+          code: 'vi',
+          title: 'Tiếng Việt',
+        },
+        {
+          type: 'language',
+          code: 'kora',
+          title: 'Tiếng Hàn',
+        },
+        {
+          type: 'language',
+          code: 'jap',
+          title: 'Tiếng Nhật',
+        },
+        {
+          type: 'language',
+          code: 'chin',
+          title: 'Tiếng Trung',
+        },
         {
           type: 'language',
           code: 'en',
@@ -108,9 +186,7 @@ const MENU_USER = [
 ];
 
 function Header() {
-
   const currentUser = true;
-
 
   //handleLogic
   const handleMenuChange = (menuItems) => {
@@ -125,7 +201,9 @@ function Header() {
     <header className={cx('wrapper')}>
       <div className={cx('content')}>
         <div className={cx('logo')}>
-          <img style={{ with: '118px', height: '42px' }} src="media/logotiktokcontent.png" alt="TikTok"></img>
+          <Link to={routesConfig.home} className={cx('logoLink')}>
+            <img style={{ with: '118px', height: '42px' }} src="media/logotiktokcontent.png" alt="TikTok"></img>
+          </Link>
         </div>
         <Search />
         <div className={cx('action')}>
@@ -162,7 +240,7 @@ function Header() {
             </>
           ) : (
             <>
-              <Button upload large to="/upload" leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+              <Button upload large to={routesConfig.upload} leftIcon={<FontAwesomeIcon icon={faPlus} />}>
                 Upload
               </Button>
               <Button large primary to="/login">
@@ -178,9 +256,7 @@ function Header() {
             {currentUser ? (
               <div>
                 <button className={cx('action-btn')} small>
-                  <Image className={cx('avatar-user')} src="/media/userHoaa.jpg" alt="Hoaa" 
-                  fallback=""
-                  />
+                  <Image className={cx('avatar-user')} src="/media/userHoaa.jpg" alt="Hoaa" fallback="" />
                 </button>
               </div>
             ) : (

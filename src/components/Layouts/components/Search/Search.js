@@ -6,7 +6,7 @@ import classNames from 'classnames/bind';
 
 import * as searchServices from '~/services/searchService';
 import { Wrapper as PopperWrapper } from '~/components/Popper/indexWrapper';
-import * as htppRequest from '~/utils/httpRequest';
+// import * as htppRequest from '~/utils/httpRequest';
 import AccountsItem from '~/components/Accountltems/AccountItem';
 import { SearchIcon } from '~/components/Icon/Icon';
 import { useDebounce } from '~/hooks';
@@ -63,6 +63,8 @@ function Search() {
     // this by creating a new parentNode context.
     <div>
       <HeaderLeftTippy
+        // {...passProps}
+        // appendTo={() => document.body}
         interactive
         visible={showResult && searchResult.length > 0}
         render={(attrs) => (

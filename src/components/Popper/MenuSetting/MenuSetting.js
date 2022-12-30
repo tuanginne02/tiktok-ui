@@ -9,7 +9,7 @@ import { useState } from 'react';
 const cx = classNames.bind(style);
 const defaultFn = () => {};
 
-function MenuSetting({ children, items = [], onChange = defaultFn }) {
+function MenuSetting({ children, items = [], onChange = defaultFn, hideOnClick = false, }) {
   const [history, setHistory] = useState([{ data: items }]);
   const current = history[history.length - 1];
 
@@ -40,6 +40,7 @@ function MenuSetting({ children, items = [], onChange = defaultFn }) {
       delay={[0, 700]}
       // animation="scale"
       // visible
+      hideOnClick={hideOnClick}
       interactive
       render={(attrs) => (
         <div className={cx('wrapper')} tabIndex="-1" {...attrs}>
@@ -52,7 +53,7 @@ function MenuSetting({ children, items = [], onChange = defaultFn }) {
                 }}
               />
             )}
-            {renderItems()}
+            <div className={cx('menu-scroll')}> {renderItems()}</div>
           </PopperWrapper>
         </div>
       )}

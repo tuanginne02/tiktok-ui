@@ -17,6 +17,8 @@
   --default-layout-horizontal-spacer: 24px;
 }
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -27,19 +29,32 @@ html {
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.6rem;
-  font-weight: 500;
   line-height: 1.5;
-  margin: 0;
-  padding: 0;
-  color: var(--text-color);
-  background-color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  color: var(--text-color);
+  overflow-y: overlay;
+  // background-color: #fff;
+  //   -webkit-font-smoothing: antialiased;
+  //   -moz-osx-font-smoothing: grayscale;
+  //   -webkit-text-size-adjust: 100%;
+  //   -ms-text-size-adjust: 100%;
+  //   text-size-adjust: 100%;
+  //   -webkit-font-smoothing: antialiased;
+}
+// Scrollbar CSS
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
 }
 .line {
   height: calc(var(--search-height) / 2);
@@ -57,24 +72,26 @@ a[href] {
   color: var(--text-color);
   text-decoration: none;
 }
-//Custom typpy tootip
+// Custom tippy tooltip
 body {
   .tippy-box {
-    background-color: rgba(84, 84, 84, 0.92);
     border-radius: 8px;
     font-weight: 600;
-    height: 38px;
     font-size: 1.6rem;
     line-height: 2.2rem;
+    background-color: rgba(84, 84, 84, 0.92);
   }
+
   .tippy-arrow {
     color: rgba(84, 84, 84, 0.92);
   }
-  .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
-    top: -8px;
-  }
+
   .tippy-content {
     padding: 8px 9px;
+  }
+
+  .tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+    top: -8px;
   }
 }
 .icon-no {
