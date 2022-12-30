@@ -4,7 +4,7 @@ import Button from '~/components/Button';
 const cx = classNames.bind(styles);
 
 function MenuItem({ data, onClick}) {
-  const classes = cx('menu-item', {
+  const classes = cx('wrapper-item', {
     separate: data.separate,
   });
   return (

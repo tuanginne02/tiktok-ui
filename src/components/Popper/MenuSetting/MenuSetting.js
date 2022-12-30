@@ -39,7 +39,7 @@ function MenuSetting({ children, items = [], onChange = defaultFn }) {
       placement="bottom-end"
       delay={[0, 700]}
       // animation="scale"
-      visible
+      // visible
       interactive
       render={(attrs) => (
         <div className={cx('wrapper')} tabIndex="-1" {...attrs}>

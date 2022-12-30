@@ -15,70 +15,6 @@
   margin: 20px 0;
   padding: 0 var(--default-layout-horizontal-spacer);
 }
-.search,
-.search-result {
-  width: 361px;
-}
-.search {
-  position: relative;
-  display: flex;
-  border: 1.5px solid transparent;
-  align-items: center;
-  width: 361px;
-  height: var(--search-height);
-  border-radius: var(--default-border-radius);
-  background-color: rgba(22, 24, 35, 0.06);
-  padding-left: 16px;
-  justify-items: center;
-  input {
-    caret-color: var(--primary);
-    color: rgba(22, 24, 35, 0.3);
-    padding: 12px 0;
-    font-size: 1.6rem;
-    outline: none;
-    background-color: transparent;
-    flex: 1;
-  }
-  input:not(:placeholder-shown) ~ .search-button {
-    color: rgba(22, 24, 35, 0.75);
-  }
-
-  &:focus-within {
-    border-color: rgba(22, 24, 35, 0.2);
-  }
-}
-.search-clear,
-.loading {
-  position: absolute;
-  right: calc(var(--search-bottom-width) + 16px);
-  background: transparent;
-  color: rgba(22, 24, 35, 0.34);
-}
-.search-button {
-  background: transparent;
-  width: var(--search-bottom-width);
-  height: 100%;
-  border-top-right-radius: var(--default-border-radius);
-  border-bottom-right-radius: var(--default-border-radius);
-
-  font-size: 1.8rem;
-  color: rgba(22, 24, 35, 0.3);
-  &:hover {
-    cursor: pointer;
-    background-color: rgba(22, 24, 35, 0.03);
-  }
-  &:active {
-    background-color: rgba(22, 24, 35, 0.06);
-  }
-}
-
-.search-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: rgba(22, 24, 35, 0.7);
-  margin: 10px 15px;
-  padding: 0;
-}
 
 .action {
   display: flex;
@@ -94,12 +30,6 @@
     background-color: rgba(22, 24, 35, 0.03);
   }
 }
-.line {
-  height: calc(var(--search-height) / 2);
-  width: 1px;
-  margin: var(--search-margin) 0;
-  background-color: rgba(22, 24, 35, 0.3);
-}
 
 //action user
 .current-user {
@@ -114,14 +44,36 @@
   border: transparent;
 }
 .action-btn {
+  position: relative;
   background-color: transparent;
   // color:  rgba(22, 24, 35, 0.6);
   font-size: 2.6rem;
   padding: 20px;
   cursor: pointer;
-  .iconBackground {
-    background: var(--white);
-  }
+}
+.badge {
+  position: absolute;
+  top: -3px;
+  right: 0px;
+  padding: 0px 6px;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  font-family: var(--font-family);
+  background-color: var(--primary);
+}
+
+.iconBackground {
+  font-size: 2rem;
+}
+.iconBackground1,
+.iconBackground2 {
+  font-size: 3rem;
+  float: right;
+  margin-left: 55px;
 }
 .icon-no {
   height: 25px;

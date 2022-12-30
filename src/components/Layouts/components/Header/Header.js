@@ -1,20 +1,19 @@
 import classNames from 'classnames/bind';
 import style from './Header.module.scss';
-import AccountsItem from '~/components/Accountltems/AccountItem';
+// import AccountsItem from '~/components/Accountltems/AccountItem';
 import MenuSetting from '~/components/Popper/MenuSetting';
 import Button from '~/components/Button';
+import Search from '../Search';
+import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icon/Icon';
+import Image from '~/components/Image';
 
 import Tippy from '@tippyjs/react/';
 import 'tippy.js/dist/tippy.css';
-import HeaderLeftTippy from '@tippyjs/react/headless';
-
-import { useState, useEffect } from 'react';
-import { Wrapper as PopperWrapper } from '~/components/Popper/indexWrapper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faCircleXmark,
-  faMagnifyingGlass,
-  faSpinner,
+  // faCircleXmark,
+  // faMagnifyingGlass,
+  // faSpinner,
   faPlus,
   faEllipsisVertical,
   faLanguage,
@@ -23,9 +22,6 @@ import {
   faMoon,
   faToggleOn,
   faToggleOff,
-  faCloudArrowUp,
-  faMessage,
-  faPaperPlane,
   faRightFromBracket,
   faUser,
   faGear,
@@ -78,8 +74,8 @@ const MENU_ITEMS = [
   },
   {
     icon: <FontAwesomeIcon className={cx('iconBackground')} icon={faMoon} />,
-    icon1: <FontAwesomeIcon className={cx('iconBackground')} icon={faToggleOn} />,
-    icon2: <FontAwesomeIcon className={cx('iconBackground')} icon={faToggleOff} />,
+    icon1: <FontAwesomeIcon className={cx('iconBackground1')} icon={faToggleOn} />,
+    icon2: <FontAwesomeIcon className={cx('iconBackground2')} icon={faToggleOff} />,
     title: 'Dark mode',
   },
 ];
@@ -88,39 +84,33 @@ const MENU_USER = [
   {
     icon: <FontAwesomeIcon className={cx('iconBackground')} icon={faUser} />,
     title: 'View profile',
-    to:'/profile',
+    to: '/profile',
     separate: true,
-
   },
   {
     icon: <img className={cx('icon-no')} src="/media/icon/coinTitok.png" alt="Coin Titok" />,
     title: 'Coin Titok',
-    to:'/coin-titok',
+    to: '/coin-titok',
   },
   {
     icon: <FontAwesomeIcon className={cx('iconBackground')} icon={faGear} />,
     title: 'Setting',
-    to:'/setting',
+    to: '/setting',
   },
   ...MENU_ITEMS,
 
   {
     icon: <FontAwesomeIcon className={cx('iconBackground')} icon={faRightFromBracket} />,
     title: 'Log out',
-    to:'/logout',
+    to: '/logout',
     separate: true,
   },
 ];
 
 function Header() {
-  const [searchResult, setSearchResult] = useState([]);
+
   const currentUser = true;
 
-  useEffect(() => {
-    setTimeout(() => {
-      setSearchResult([1, 2, 3]);
-    }, 0);
-  }, []);
 
   //handleLogic
   const handleMenuChange = (menuItems) => {
@@ -137,34 +127,7 @@ function Header() {
         <div className={cx('logo')}>
           <img style={{ with: '118px', height: '42px' }} src="media/logotiktokcontent.png" alt="TikTok"></img>
         </div>
-        <HeaderLeftTippy
-          interactive
-          visible={searchResult.length > 0}
-          render={(attrs) => (
-            <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-              <PopperWrapper>
-                <h4 className={cx('search-title')}>Accout</h4>
-                <AccountsItem />
-                <AccountsItem />
-                <AccountsItem />
-                <AccountsItem />
-              </PopperWrapper>
-            </div>
-          )}
-        >
-          <div className={cx('search')}>
-            <input className={cx('search-input')} type="text" placeholder="Search accout and videos" />
-
-            <button className={cx('search-clear')}>
-              <FontAwesomeIcon className={cx('iconBackground')} icon={faCircleXmark} />
-            </button>
-            <FontAwesomeIcon className={cx('loading', 'iconBackground')} icon={faSpinner} />
-            <div className={cx('line')}></div>
-            <button className={cx('search-button')}>
-              <FontAwesomeIcon className={cx('iconBackground')} icon={faMagnifyingGlass} />
-            </button>
-          </div>
-        </HeaderLeftTippy>
+        <Search />
         <div className={cx('action')}>
           {currentUser ? (
             <>
@@ -172,21 +135,26 @@ function Header() {
                 <Tippy delay={[0, 500]} content="Tải Lên" placement="bottom">
                   <div>
                     <button className={cx('action-btn')} to="/upload">
-                      <FontAwesomeIcon className={cx('iconBackground')} icon={faCloudArrowUp} />
+                      {/* <FontAwesomeIcon className={cx('iconBackground')} icon={faCloudArrowUp} /> */}
+
+                      <UploadIcon />
                     </button>
                   </div>
                 </Tippy>
                 <Tippy delay={[0, 500]} content="Tin Nhắn" placement="bottom">
                   <div>
                     <button className={cx('action-btn')}>
-                      <FontAwesomeIcon className={cx('iconBackground')} icon={faPaperPlane} />
+                      {/* <FontAwesomeIcon className={cx('iconBackground')} icon={faPaperPlane} /> */}
+                      <MessageIcon />
                     </button>
                   </div>
                 </Tippy>
                 <Tippy delay={[0, 500]} content="Thông Báo" placement="bottom">
                   <div>
                     <button className={cx('action-btn')}>
-                      <FontAwesomeIcon className={cx('iconBackground')} icon={faMessage} />
+                      {/* <FontAwesomeIcon className={cx('iconBackground')} icon={faMessage} /> */}
+                      <InboxIcon />
+                      <span className={cx('badge')}>12</span>
                     </button>
                   </div>
                 </Tippy>
@@ -200,9 +168,9 @@ function Header() {
               <Button large primary to="/login">
                 Log in
               </Button>
-              <Button rounded className={cx('customs-plugin')}>
+              {/* <Button rounded className={cx('customs-plugin')}>
                 Get app
-              </Button>
+              </Button> */}
             </>
           )}
 
@@ -210,7 +178,9 @@ function Header() {
             {currentUser ? (
               <div>
                 <button className={cx('action-btn')} small>
-                  <img className={cx('avatar-user')} src="/media/userHoaa.jpg" alt="Avatar" />
+                  <Image className={cx('avatar-user')} src="/media/userHoaa.jpg" alt="Hoaa" 
+                  fallback=""
+                  />
                 </button>
               </div>
             ) : (
