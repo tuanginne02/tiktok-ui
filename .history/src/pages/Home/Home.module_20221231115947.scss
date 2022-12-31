@@ -1,0 +1,62 @@
+// .wrapper {
+//     width: 320px;
+//     padding: 20px;
+//   }
+
+//   .header {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//   }
+.home {
+    display: flex;
+    flex-direction: column;
+ 
+}
+.img-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+.follow-btn {
+  padding: 6px 16px;
+  width: 20px;
+  height: 35px;
+}
+
+.body {
+  margin-top: 12px;
+  color: #161823;
+}
+
+.nickname {
+  font-size: 1.8rem;
+}
+
+.check {
+  font-size: 1.4rem;
+  color: var(--tikets-check);
+  margin-left: 4px;
+}
+
+.name {
+  font-size: 1.4rem;
+  color: rgba(24, 25, 34, 0.8);
+}
+
+.analytics {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  .label {
+    color: rgba(24, 25, 34, 0.8);
+    font-weight: 600px;
+  }
+  .value {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+.value ~ .value {
+  margin-left: 20px;
+}

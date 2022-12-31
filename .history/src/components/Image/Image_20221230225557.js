@@ -1,0 +1,40 @@
+import { useState, forwardRef } from 'react';
+import classNames from 'classnames';
+import images from '~/assets/images';
+import styles from './Image.module.scss';
+import PropTypes from 'prop-types';
+
+
+
+const Image = forwardRef(({ src, alt, className, fallback: customFallback = images.noImage, ...props }, ref) => {
+  const [fallback, setFallback] = useState('');
+
+  const handleError = () => {
+    setFallback(customFallback);
+  };
+
+  return (
+    <img
+      className={classNames(styles.wrapper, className)}
+      ref={ref}
+      src={fallback || src}
+      alt={alt}
+      {...props}
+      onError={handleError}
+    />
+  );
+});
+Image.propStypes = {
+  src:PropStypes.string,
+  alt:PropStypes.string,
+  className:PropStypes.string,
+fallback:PropStypes.string,
+}
+export default Image;
+
+// function Image({ ...props }) {
+//   // eslint-disable-next-line jsx-a11y/alt-text
+//   return <img {...props} />;
+// }
+
+// export default forwardRef (Image);

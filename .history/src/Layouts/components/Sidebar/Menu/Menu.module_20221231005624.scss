@@ -1,0 +1,14 @@
+.wrapper {
+    didplay: flex;
+
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    .title {
+        font-weight: 700;
+        font-size: 3rem;
+    }
+}

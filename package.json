@@ -49,6 +49,7 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "customize-cra": "^1.0.0",
     "react-app-rewired": "^2.2.1",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "video.js": "^7.20.3"
   }
 }

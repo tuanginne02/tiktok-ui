@@ -1,0 +1,8 @@
+.wrapper {
+  width: 356px;
+  min-height: 1000px;
+  padding: 20px 0 20px 0;
+  &.separate {
+    border-bottom-left-radius: 1px soild rgba(22, 24, 35, 0.12);
+  }
+}

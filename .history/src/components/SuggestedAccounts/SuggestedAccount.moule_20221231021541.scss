@@ -1,0 +1,14 @@
+
+
+.account-item {
+    display: flex;
+    margin-top:20px;
+}
+.avatar {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+//   background-image: transparent;
+//   border: transparent;
+}

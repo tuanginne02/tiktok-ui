@@ -1,0 +1,72 @@
+.wrapper-home {
+  display: flex;
+  margin-top: 50px;
+//   width: 320px;
+//   padding: 20px;
+}
+.avatar-home {
+  padding-right: 10px;
+}
+.img-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.content {
+   
+}
+.header-content {
+
+}
+
+.user-name {
+    display: flex
+
+}
+
+.account-item {
+
+}
+
+.item-info {
+    display: flex;
+}
+
+.nickname {
+  font-size: 1.8rem;
+  margin-right: 5px;
+}
+
+.check {
+    font-size: 1.4rem;
+    color: var(--tikets-check);
+    margin-left: 4px;
+}
+
+.name {
+    font-size: 1.4rem;
+    color: rgba(24, 25, 34, 0.8);
+}
+
+.analytics {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    .label {
+        color: rgba(24, 25, 34, 0.8);
+        font-weight: 600px;
+    }
+    .value {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
+.value ~ .value {
+    margin-left: 20px;
+}
+
+.follow-btn {
+  padding: 6px 16px;
+  width: 20px;
+  height: 35px;
+}
