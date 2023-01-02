@@ -1,0 +1,30 @@
+.header-live {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(241, 241, 242, 1);
+  border-radius: 50px;
+}
+.header-live {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.btn-header {
+  border: 1px solid transparent;
+  padding: 0 10px;
+  .btn-fy {
+    background-color: black;
+  }
+  :hover {
+    background-color: rgba(241, 241, 242, 1);
+
+  }
+}
+.btn-fy,
+.btn-fl {
+  background-color: rgba(24, 25, 34, 0.6);
+  border-radius: 50px;
+  width: 130px;
+  color: var(--white);
+}

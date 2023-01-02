@@ -1,0 +1,36 @@
+.wrapper {
+  width: 320px;
+  padding: 20px;
+  margin-top: -30px;
+}
+.container {
+  padding: 20px 10px;
+}
+.className={cx('row-items')}>
+.
+.icon-share {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:red;
+  :hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+.btn-share {
+  padding: 10px 0;
+  margin-left: 10px;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.icon-down {
+  padding: 10px 0;
+  margin-left: 10px;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

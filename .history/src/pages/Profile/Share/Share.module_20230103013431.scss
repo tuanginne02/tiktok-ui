@@ -1,0 +1,42 @@
+.wrapper {
+  width: 320px;
+  padding: 20px;
+  margin-top: -30px;
+  height: 295px;
+  overflow-y: hidden;
+}
+.container {
+  padding: 20px 10px;
+}
+.row-items {
+  width: 100%;
+  :hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}
+.icon-share {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-share {
+  padding: 10px 0;
+  margin-left: 10px;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.icon-down {
+  po
+  padding: 10px 0;
+  margin-left: 10px;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  :hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
+}

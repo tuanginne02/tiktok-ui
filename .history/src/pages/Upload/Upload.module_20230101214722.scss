@@ -1,0 +1,205 @@
+.upload {
+  position: absolute;
+  margin-top: 100px;
+  min-height: 1000px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.body-upload {
+  position: relative;
+  min-height: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-upload-container {
+  position: absolute;
+  margin-top: 20px;
+  top: 0;
+  height: 100%;
+  width: 1100px;
+  border: 1px solid transparent;
+  box-shadow: 3px 3px 3px 5px rgba(24, 25, 35, 0.07);
+  padding: 10px 20px;
+}
+//header
+.header-upload {
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.header-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.header-title-upload {
+  padding-top: 10px;
+  .title {
+    color: rgba(24, 25, 35, 0.4);
+  }
+}
+//body
+.content-upload {
+  display: flex;
+  width: 1100px;
+  margin-top: -200px;
+  padding: 0 50px;
+}
+.heading-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+//right
+.content-post-upload {
+  //   margin-top:30px;
+  border: 1px dashed rgba(24, 25, 35, 0.4);
+  padding: 50px 20px;
+  padding-bottom: 80px;
+  cursor: pointer;
+  :hover {
+    // background-color: rgba(22, 24, 35, 0.03);
+    border-color: var(--primary);
+    background-color: red;
+  }
+}
+.inp-post {
+  display: none;
+}
+.content-post {
+  border-radius: 8px;
+  display: flex;
+  //   -webkit-box-pack: center;
+  //   justify-content: center;
+  //   -webkit-box-align: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background 0.15s ease-in-out 0s;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 30px;
+}
+.icon-upload {
+  font-size: 3rem;
+  color: rgba(24, 25, 35, 0.4);
+}
+.content-post-title,
+.sports-upload,
+.standard-post-upload {
+  padding: 10px 0;
+}
+.content-post-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.sports-upload,
+.standard-post-upload {
+  font-size: 1.4rem;
+  color: rgba(22, 24, 35, 0.4);
+}
+.standard-post-upload {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title-uncle {
+    padding: 5px 0;
+  }
+}
+
+.post-upload-btn {
+  margin-top: 30px;
+  cursor: pointer;
+  :hover {
+    border-color: rgba(234, 40, 78, 1);
+    background-color: rgba(234, 40, 78, 1);
+  }
+}
+//left
+.item-left {
+  width: 100%;
+}
+.content-manipulation-upload {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  flex: 1 1 0%;
+  min-width: 0px;
+}
+.caption,
+.cover,
+.check-watch-video,
+.finish-check,
+.title-remind,
+.btn-post {
+  padding-bottom: 20px;
+}
+.caption,
+.cover {
+  display: flex;
+  flex-direction: column;
+  .inp-caption,
+  .inp-cover {
+    border: 1px solid rgba(22, 24, 35, 0.2);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+  }
+}
+.cover {
+  .inp-cover {
+    height: 200px;
+  }
+}
+.check-watch-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .inp-check-watch {
+    width: 30%;
+    margin-top: 10px;
+    height: 40px;
+  }
+}
+.title-check {
+  margin-top: 35px;
+}
+
+.finish-check-title {
+  padding: 10px 0;
+}
+.check-user {
+  display: flex;
+  align-items: center;
+  .checkbox-user {
+    margin-right: 20px;
+    .inp-check-user {
+      margin-right: 10px;
+    }
+  }
+}
+.finish-check {
+  display: flex;
+  align-items: center;
+  .check-btn {
+    margin-right: 10px;
+  }
+  .toggle-check {
+    font-size: 4rem;
+    color: rgba(22, 24, 35, 0.2);
+  }
+}
+.title-remind-title {
+  color: rgba(22, 25, 35, 0.5);
+  .title-remind-link {
+    font-size: 1.5rem;
+    color: var(--black);
+  }
+}
+.btn-post {
+    display:flex;
+    align-items: center;
+}
+.btn-discard,
+.btn-post {
+    
+}

@@ -1,0 +1,136 @@
+import React, { useState } from 'react';
+import classnames from 'classnames/bind';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheckCircle, faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import Tippy from '@tippyjs/react/headless';
+
+import style from './Profile.module.scss';
+
+import Button from '~/components/Button';
+
+import { ShareTikTok, MoreTiktok, EditProfile, Blocked } from '~/components/Icon/Icon';
+
+const cx = classnames.bind(style);
+
+function Profile() {
+  const [isActiveVideos, setIsActiveVideos] = useState(false);
+  const [isActiveLiked, setIsActiveLiked] = useState(false);
+  const [isActiveIconBlock, setIsActiveIconBlock] = useState(false);
+
+  const handleClickVideos = () => {
+    // 👇️ toggle
+    setIsActiveVideos((current) => !current);
+  };
+  const handleClickLiked = () => {
+    // 👇️ toggle
+    setIsActiveLiked((current) => !current);
+  };
+  const handleClickIconBlock = () => {
+    // 👇️ toggle
+    setIsActiveIconBlock((current) => !current);
+  };
+  return (
+    <div className={cx('profile')}>
+      <div className={cx('profile-content')}>
+        <div className={cx('profile-header')}>
+          <div className={cx('profile-avatar')}>
+            <div className={cx('avatar')}>
+              <div className={cx('avatar-image')}>
+                <img src="/media/imgAccount/DLPH-hoaa.png" alt="hoaa" />
+              </div>
+            </div>
+            <div className={cx('profile-name')}>
+              <div className={cx('profile-name-text')}>
+                hoaa.hanassii
+                <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+              </div>
+              <span className={cx('user-name')}>Đào Lê Phương Hoa</span>
+              <button className={cx('user-button')}>
+                {/* <FontAwesomeIcon className="edit-icon" icon={faPenToSquare} /> */}
+                <EditProfile className="edit-icon" />
+                <p> Edit profile</p>
+              </button>
+            </div>
+          </div>
+          <div className={cx('profile-interactive')}>
+            <div className={cx('interactive')}>
+              <div className={cx('interactive-fl')}>
+                <strong className={cx('value')}>123</strong>
+                <span className={cx('label')}>Following</span>
+              </div>
+
+              <div className={cx('interactive-flws')}>
+                <strong className={cx('value')}>13.5M</strong>
+                <span className={cx('label')}>Followers</span>
+              </div>
+              <div className={cx('interactive-likes')}>
+                <strong className={cx('value')}>331.8M</strong>
+                <span className={cx('label')}>Likes</span>
+              </div>
+            </div>
+            <div className={cx('profile-bigo')}>
+              <div className={cx('bigo-text')}>
+                <span>✨ 1998 ✨</span>
+                <p>Vietnam 🇻🇳 </p>
+                <p>KHÔNG CÓ NICK PHỤ</p>
+              </div>
+              <div className={cx('bigo-link')}>
+                <p>https://www.facebook.com/hoaa.hanassi</p>
+              </div>
+            </div>
+            <div className={cx('profile-share')}>
+              <Tippyinteractive placement="bottom" delay={[800, 0]}>
+                <div className={cx('share-icon')}>
+                  <ShareTikTok />
+                </div>
+              </Tippyinteractive>
+              <div className={cx('more-icon')}>
+                <MoreTiktok />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={cx('profile-body')}>
+          <div className={cx('btn-body')}>
+            <div className={cx('body-videos')}>
+              <Button
+                style={{
+                  color: isActiveVideos ? 'rgba(24, 25, 35, 0.3)' : '',
+                }}
+                onClick={handleClickVideos}
+              >
+                Videos
+              </Button>
+            </div>
+            <div
+              className={cx('body-likes')}
+              style={{
+                color: isActiveIconBlock ? 'black' : '',
+                '&.btn-likes': {
+                  color: isActiveIconBlock ? 'rgba(24, 25, 35, 0.3)' : '',
+                },
+              }}
+              onClick={handleClickIconBlock}
+            >
+              <Blocked className={cx('icon-block')} />
+              <Button
+                className={cx('btn-likes')}
+                // style={{
+                //   color: isActiveLiked ? 'black' : '',
+                // }}
+                // onClick={handleClickLiked}
+              >
+                <div>{/* <Blocked className={cx('icon-block')} /> */}</div>
+                <span>Liked</span>
+              </Button>
+            </div>
+          </div>
+          <div className={cx('line-scroll')}></div>
+          <div className={cx('content-body')}></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Profile;

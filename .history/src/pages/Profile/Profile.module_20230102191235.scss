@@ -1,0 +1,31 @@
+.profile {
+  margin-top: 50px;
+}
+
+.profile-avatar {
+  display: flex;
+  flex-direction: row;
+}
+.avatar {
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+}
+.profile-name {
+  margin-top: 20px;
+  margin-left: 20px;
+  .profile-name-text {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .check {
+    color: var(--tikets-check);
+    margin-left: 5px;
+    box-shadow: 0px 0px 5px var(--tikets-check);
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+  }
+}

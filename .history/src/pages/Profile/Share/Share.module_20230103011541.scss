@@ -1,0 +1,33 @@
+.wrapper {
+  width: 320px;
+  padding: 20px;
+  margin-top: -30px;
+}
+.container {
+  padding: 20px 10px;
+}
+.icon-share {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-share {
+  padding: 10px 0;
+  margin-left: 10px;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+  :hover {
+    background-color: rgba();
+  }
+}
+.icon-down {
+  padding: 10px 0;
+  margin-left: 10px;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
