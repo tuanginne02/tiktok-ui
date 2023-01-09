@@ -1,0 +1,111 @@
+import React, { useState } from 'react';
+import classNames from 'classnames/bind';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
+import Button from '~/components/Button';
+import styles from './Share.module.scss';
+import {
+  Embed,
+  Facebook,
+  WhatsApp,
+  Twitter,
+  CopyLink,
+  LinkedIn,
+  Reddit,
+  Telegram,
+  Email,
+} from '~/components/Icon/Icon';
+
+const cx = classNames.bind(styles);
+
+function Share() {
+  const [isshowShare, setIsShowShare] = useState(false);
+
+  const handleClickShare = () => {
+    // 👇️ toggle
+    setIsShowShare((current) => !current);
+  };
+  
+  return (
+    <div
+      className={cx('wrapper')}
+      style={{
+        height: isshowShare ? '100%' : '',
+        overflowY: isshowShare ? 'hidden' : '',
+      }}
+      // onClick={handleClickShare}
+    >
+      <div className={cx('container')}></div>
+     <div >
+        <div className={cx('row-items')}>
+              <Embed />
+            <div className={cx('icon-share')}>
+              <Button className={cx('btn-share')}>Embed</Button>
+            </div>
+        </div>
+     </div>
+      <div className={cx('row-items')}>
+        <div className={cx('icon-share')}>
+          <Facebook />
+          <Button className={cx('btn-share')}>Share to Facebook</Button>
+        </div>
+      </div>
+      <div className={cx('row-items')}>
+        <div className={cx('icon-share')}>
+          <WhatsApp />
+          <Button className={cx('btn-share')}>Share to WhatsApp</Button>
+        </div>
+      </div>
+      <div className={cx('row-items')}>
+        <div className={cx('icon-share')}>
+          <Twitter />
+          <Button className={cx('btn-share')}>Share to Twitter</Button>
+        </div>
+      </div>
+      <div className={cx('row-items')}>
+        <div className={cx('icon-share')}>
+          <CopyLink />
+          <Button className={cx('btn-share')}>Copy link</Button>
+        </div>
+      </div>
+      <div className={cx('row-items')}>
+        <div className={cx('icon-share')}>
+          <LinkedIn />
+          <Button className={cx('btn-share')}>Share to LinkedIn</Button>
+        </div>
+      </div>
+      <div className={cx('row-items')}>
+        <div className={cx('icon-share')}>
+          <Reddit />
+          <Button className={cx('btn-share')}>Share to Reddit</Button>
+        </div>
+      </div>
+      <div className={cx('row-items')}>
+        <div className={cx('icon-share')}>
+          <Telegram />
+          <Button className={cx('btn-share')}>Share to Telegram</Button>
+        </div>
+      </div>
+      <div className={cx('row-items')}>
+        <div className={cx('icon-share')}>
+          <Email />
+          <Button className={cx('btn-share')}>Share to Email</Button>
+        </div>
+      </div>
+      <div
+        className={cx('row-items-down')}
+        style={{
+          display: isshowShare ? 'none' : '',
+        }}
+        onClick={handleClickShare}
+      >
+        <div className={cx('icon-down')}>
+          <FontAwesomeIcon icon={faChevronDown} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Share;

@@ -4,7 +4,7 @@ import style from './HeaderLive.module.scss';
 import MenuSetting from '~/components/Popper/MenuSetting';
 import Button from '~/components/Button';
 import Search from '../components/Search';
-import { InboxIcon, MessageIcon, UploadIcon,CoinTitok } from '~/components/Icon/Icon';
+import { InboxIcon, MessageIcon, UploadIcon, CoinTitok } from '~/components/Icon/Icon';
 import Image from '~/components/Image';
 import config from '~/config';
 
@@ -172,7 +172,7 @@ const MENU_USER = [
   {
     icon: <img className={cx('icon-no')} src="/media/icon/coinTitok.png" alt="Coin Titok" />,
     title: 'Coin Titok',
-    to: '/coin-titok',
+    to: '/getcoin',
   },
   {
     icon: <FontAwesomeIcon className={cx('iconBackground')} icon={faGear} />,
@@ -246,7 +246,7 @@ function HeaderLive() {
                     <button className={cx('action-btn')}>
                       <CoinTitok />
                     </button>
-                    </div>
+                  </div>
                 </Tippy>
               </div>
             </>

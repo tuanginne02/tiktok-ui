@@ -172,7 +172,7 @@ const MENU_USER = [
   {
     icon: <img className={cx('icon-no')} src="/media/icon/coinTitok.png" alt="Coin Titok" />,
     title: 'Coin Titok',
-    to: '/coin-titok',
+    to: '/getcoin',
   },
   {
     icon: <FontAwesomeIcon className={cx('iconBackground')} icon={faGear} />,
@@ -214,7 +214,7 @@ function Header() {
         <div className={cx('action')}>
           {currentUser ? (
             <>
-              <div className={cx('current-user')} >
+              <div className={cx('current-user')}>
                 <Tippy delay={[0, 500]} content="Tải Lên" placement="bottom">
                   <div>
                     <button className={cx('action-btn')} to="/upload">

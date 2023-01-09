@@ -172,7 +172,7 @@ const MENU_USER = [
   {
     icon: <img className={cx('icon-no')} src="/media/icon/coinTitok.png" alt="Coin Titok" />,
     title: 'Coin Titok',
-    to: '/coin-titok',
+    to: '/getcoin',
   },
   {
     icon: <FontAwesomeIcon className={cx('iconBackground')} icon={faGear} />,
@@ -206,11 +206,7 @@ function Header() {
       <div className={cx('content')}>
         <div className={cx('logo')}>
           <Link to={config.routes.home} className={cx('logoLink')}>
-            <img
-              style={{ with: '118px', height: '42px' }}
-              src="/m"
-              alt="TikTok"
-            ></img>
+            <img style={{ with: '118px', height: '42px' }} src="/m" alt="TikTok"></img>
           </Link>
         </div>
 

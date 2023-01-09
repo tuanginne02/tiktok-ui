@@ -172,7 +172,7 @@ const MENU_USER = [
   {
     icon: <img className={cx('icon-no')} src="/media/icon/coinTitok.png" alt="Coin Titok" />,
     title: 'Coin Titok',
-    to: '/coin-titok',
+    to: '/getcoin',
   },
   {
     icon: <FontAwesomeIcon className={cx('iconBackground')} icon={faGear} />,
@@ -209,7 +209,7 @@ function Header() {
             <img style={{ with: '118px', height: '42px' }} src="media/logotiktokcontent.png" alt="TikTok"></img>
           </Link>
         </div>
-       
+
         <Search />
         <div className={cx('action')}>
           {currentUser ? (

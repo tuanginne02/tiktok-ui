@@ -172,7 +172,7 @@ const MENU_USER = [
   {
     icon: <img className={cx('icon-no')} src="/media/icon/coinTitok.png" alt="Coin Titok" />,
     title: 'Coin Titok',
-    to: '/coin-titok',
+    to: '/getcoin',
   },
   {
     icon: <FontAwesomeIcon className={cx('iconBackground')} icon={faGear} />,
