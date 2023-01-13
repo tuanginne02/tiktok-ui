@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 12%) 0px 2px 12px;
+  border-radius: 8px;
+  max-height: min((100vh - 96px) - 60px, 734px);
+  min-height: 100px;
+  padding-top: 8px;
+  // overflow: hidden;
+}
+//KeyBoard
+
+.keyboard {
+  position: fixed;
+  inset: 0px;
+  z-index: 1001;
+  overflow: auto;
+  outline: 0px;
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+  display: flex;
+  opacity: 1;
+  .keyboard-container {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0px;
+    .keyboard-body {
+    }
+  }
+}

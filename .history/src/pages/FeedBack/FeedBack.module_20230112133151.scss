@@ -1,0 +1,27 @@
+.feedback {
+    position: absolute;
+    //   margin-top: 100px;
+    background-color: transparent;
+    min-height: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .body-feed {
+    position: relative;
+    background-color: transparent;
+    min-height: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .body-upload-container {
+    position: absolute;
+    margin-top: 20px;
+    top: 0;
+    height: 100%;
+    width: 1100px;
+    border: 1px solid transparent;
+    box-shadow: 3px 3px 3px 5px rgba(24, 25, 35, 0.07);
+    padding: 10px 20px;
+  }

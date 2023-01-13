@@ -1,0 +1,140 @@
+.feedBack {
+  position: absolute;
+  background-color: transparent;
+  min-height: 10000px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.body-feedBack {
+  position: relative;
+  background-color: transparent;
+  min-height: 1500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-feedBack-container {
+  position: absolute;
+  margin-top: 30px;
+  top: 0;
+  height: 100%;
+  width: 1100px;
+  border: 1px solid transparent;
+  padding: 10px 20px;
+}
+.icon-default {
+  color: rgba(23, 24, 35, 0.5);
+}
+.feedBack-header {
+  padding: 10px 0 30px 0;
+}
+.feedBack-content {
+  margin-top: 20px;
+  display: flex;
+  .content-left {
+    width: 60%;
+    padding-right: 30px;
+    .content-left-items {
+      padding: 0;
+    }
+  }
+}
+.active-left {
+  ::before {
+    content: '';
+    position: absolute;
+    top: 16%;
+    width: 2px;
+    left: 15px;
+    height: 30px;
+    // transform: translateY(-50%);
+    background-color: rgb(254, 44, 85);
+  }
+}
+.left-item {
+  padding: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-right {
+  width: 870px;
+  padding: 48px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 20px rgb(80 102 102 / 20%);
+  margin-left: 54px;
+  .content-right-items {
+    .right-item {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+.feedBack-conten-bt {
+  margin-top: 24px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(22, 24, 35, 0.12);
+}
+//footer
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 30px 190px;
+  width: 100%;
+  margin-bottom: -800px;
+}
+.footer-download {
+    
+}
+.footer-header {
+  display: flex;
+}
+.footer-header-logo {
+  display: flex;
+  padding-right: 100px;
+  .img-logo {
+    height: 50px;
+    padding-right: 10px;
+  }
+  .img-title {
+    height: 30px;
+    margin-top: 15px;
+  }
+}
+.footer-header-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  padding-right: 8px;
+  max-width: 226px;
+  .column-title-footer {
+    cursor: pointer;
+    :hover {
+      text-decoration: underline;
+    }
+  }
+}
+.column-title-footer {
+  padding-top: 10px;
+  // cursor: pointer;
+  color: rgba(235, 235, 235, 0.8);
+}
+.footer-bottom {
+  margin-top: 100px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  .inp-select-lngua {
+    height: 40px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+  }
+  .footer-bottom-right {
+    color: rgba(235, 235, 235, 0.5);
+  }
+}
